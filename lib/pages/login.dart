@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lab09/pages/product.dart';
 import 'package:lab09/pages/register.dart';
 
 class LoginPage extends StatefulWidget {
@@ -47,7 +48,11 @@ class _LoginPageState extends State<LoginPage> {
 
   ElevatedButton loginButton() {
     return ElevatedButton(onPressed: () {
-              
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const Product(),
+                  ));
             }, child: const Text("Login"));
   }
 
